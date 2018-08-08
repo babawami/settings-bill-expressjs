@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+
+        <div class="twelve columns box">
+          <h3>Actions</h3>
+          <div class="">
+            show all the actions - display the timestamps using fromNow and display a total cost for all the actions on the screen <br>
+            display all the sms or call actions - display the timestamps using fromNow.
+          </div>
+          
+          <hr>
+
+        </div>
+      </div>
+      <div class="row">
+          <div >
+               <table class="twelve columns">
+              <th >Item Type</th>
+              <th >Cost</th>
+              <th  >Time</th>
+              {{#each billList}}
+              <tr>
+                  <td>{{type}}</td>
+                  <td>{{cost}}</td>
+                  <td>{{timeAgo}}</td>
+              </tr>
+              {{/each}}
+          </table>
+
+          </div>
+         
+      </div>
+    </div>
+    <script src="facFunction.js" charset="utf-8"></script>
+    {{!-- <script src="js/calculate-bill.js" charset="utf-8"></script>
+    <script src="js/text-bill.js" charset="utf-8"></script>
+    <script src="js/radio-bill.js" charset="utf-8"></script> --}}
+
+
+  </body>
+</html>
